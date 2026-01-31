@@ -165,6 +165,7 @@ h3 {
 }
 
 /*  --------------SECCION SERVICIOS (Grid & Tarjetas) */
+
 /* 1. Ajuste del contenedor principal de la lista */
 .lista-servicios {
   display: grid; /* Activamos CSS Grid */
@@ -237,9 +238,7 @@ h3 {
   line-height: 1.6; /* Altura de línea para que sea fácil de leer */
 }
 
-/* ----------------------------
-   SECCIÓN FORMACIÓN (Tarjetas Horizontales)
-   ------------------------ */
+/* ----------------------------SECCIÓN FORMACIÓN (Tarjetas Horizontales)------------------------ */
 
 /* 1. Contenedor Vertical (Stack) */
 .contenedor-stack {
@@ -313,9 +312,7 @@ h3 {
   border: 1px solid #36465d;
 }
 
-/* ------------------------
-   SECCIÓN CONTACTO
-   -------------------------- */
+/* ------------------------SECCIÓN CONTACTO-------------------------- */
 
 /* 1. Contenedor Principal (Grid) */
 .lista-contactos {
@@ -385,9 +382,7 @@ h3 {
   margin: 0;
 }
 
-/* ---------------------------------
-   ESTILOS DEL FORMULARIO (Columna Derecha)
-   ------------------------------------ */
+/* ---------------------------------ESTILOS DEL FORMULARIO (Columna Derecha)------------------------------------ */
 
 .formulario-contacto {
   background-color: #172133;
@@ -478,9 +473,7 @@ h3 {
   }
 }
 
-/* -----------------------------
-   FOOTER
-------------------------------- */
+/* -----------------------------FOOTER------------------------------- */
 .footer {
   /* Un tono ligeramente diferente o igual al fondo para cerrar la página */
   background-color: var(--bg-futer);
