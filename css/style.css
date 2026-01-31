@@ -104,20 +104,20 @@ h3 {
   background-color: var(--fondo);
 }
 
-.navegacion-principal {
+.navegacion {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media (min-width: 768px) {
-  .navegacion-principal {
+  .navegacion {
     flex-direction: row;
     justify-content: space-evenly;
   }
 }
 
-.navegacion-principal a {
+.navegacion a {
   color: var(--blanco);
   text-decoration: none;
   margin: 1rem 2rem;
@@ -126,11 +126,11 @@ h3 {
   padding: 2rem;
 }
 
-.navegacion-principal a:hover {
+.navegacion a:hover {
   color: var(--secundario);
 }
 
-.navegacion-principal .boton-negro {
+.navegacion .boton-negro {
   background-color: var(--secundario);
   color: var(--negro);
   padding: 1rem 3rem;
@@ -140,31 +140,18 @@ h3 {
   font-weight: bold;
 }
 
-.navegacion-principal .boton-negro:hover {
+.navegacion .boton-negro:hover {
   color: var(--blanco);
 }
 
 /*-------------------FIN DE ENCABEZADO PRINCIPAL-------------*/
 
+/*
 .navegacion-secundaria {
   gap: 2rem;
   margin-top: 2rem;
 }
-
-.navegacion-secundaria a {
-  background-color: var(--secundario);
-  color: var(--negro);
-  padding: 1rem 3rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.navegacion-secundaria a:hover {
-  color: var(--blanco);
-}
-
+*/
 /*  --------------SECCION SERVICIOS (Grid & Tarjetas) */
 
 /* 1. Ajuste del contenedor principal de la lista */
