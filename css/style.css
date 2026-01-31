@@ -243,7 +243,6 @@ h3 {
   display: flex;
   flex-direction: column; /* Apila las tarjetas una debajo de otra */
   gap: 2rem; /* Espacio entre cada tarjeta */
-  padding: 0 2rem;
 }
 
 /* 2. Tarjeta Horizontal */
@@ -318,7 +317,6 @@ h3 {
   gap: 3rem;
   max-width: 100rem;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 /* 2. Estilo de las Tarjetas de Contacto (Izquierda) */
