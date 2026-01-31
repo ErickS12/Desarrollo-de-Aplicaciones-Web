@@ -1,0 +1,508 @@
+:root {
+  --fondo: #0f182b;
+  --secundario: #00bc7d;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --blanco-claro: #cad5e0;
+  --gris-oscuro: #6e7e91;
+  --gris-claro: #a3b1c2;
+  --bg-futer: #0b1120;
+  --fondo-claro: #111c32;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px; /* 1rem = 10px */
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  background-image: linear-gradient(
+    to top,
+    var(--fondo) 100%,
+    var(--fondo-claro) 0%
+  );
+}
+
+h2 {
+  font-size: 6rem;
+}
+h3 {
+  font-size: 4rem;
+}
+p {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.hero {
+  background-image: url(../imag/Hero.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 65rem;
+  position: relative;
+}
+
+.contenido-hero {
+  position: absolute;
+  background-color: rgba(12, 8, 31, 0.8);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.titulo-principal {
+  font-size: 4rem;
+  color: var(--gris-oscuro);
+}
+
+.texto-verde {
+  color: var(--secundario);
+}
+
+/* ------------------------INICIO DE ENCABEZADO PRINCIPAL--------------- */
+
+.encabezado-principal {
+  margin: 2rem 0;
+  color: var(--gris-oscuro);
+}
+
+.encabezado-seccion h2 {
+  margin-bottom: 1rem;
+  color: var(--gris-claro);
+}
+
+.encabezado-seccion p {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--gris-oscuro);
+}
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.nav-bg {
+  background-color: var(--fondo);
+}
+
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.navegacion-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+  margin: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+.navegacion-principal a:hover {
+  color: var(--secundario);
+}
+
+.navegacion-principal .boton-negro {
+  background-color: var(--secundario);
+  color: var(--negro);
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navegacion-principal .boton-negro:hover {
+  color: var(--blanco);
+}
+
+/*-------------------FIN DE ENCABEZADO PRINCIPAL-------------*/
+
+.navegacion-secundaria {
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.navegacion-secundaria a {
+  background-color: var(--secundario);
+  color: var(--negro);
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navegacion-secundaria a:hover {
+  color: var(--blanco);
+}
+
+/*  --------------SECCION SERVICIOS (Grid & Tarjetas) */
+/* 1. Ajuste del contenedor principal de la lista */
+.lista-servicios {
+  display: grid; /* Activamos CSS Grid */
+  /* Crea 2 columnas iguales. Si la pantalla es pequeña, baja a 1 columna automáticamente */
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 3rem; /* Espacio entre las tarjetas */
+
+  /* Centramos y limitamos el ancho igual que tu clase .contenedor */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem; /* Margen lateral para móviles */
+}
+
+/* 2. Estilo de cada Tarjeta individual */
+.item-servicio {
+  /* Color de fondo un poco más claro que el --fondo para que resalte */
+  background-color: #172133;
+
+  /* Borde sutil y redondeado */
+  border: 1px solid #2a3b55;
+  border-radius: 1.5rem;
+  padding: 4rem; /* Espacio interno generoso */
+
+  /* Transición suave para el efecto Hover */
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima de la tarjeta */
+.item-servicio:hover {
+  border-color: var(--secundario); /* El borde se pone verde */
+  transform: translateY(-0.5rem); /* La tarjeta flota un poquito hacia arriba */
+}
+
+/* 3. Estilo del contenedor del Icono (el cuadrito verde oscuro) */
+.icono {
+  /* Usamos tu color verde pero con transparencia (0.1) para el fondo */
+  background-color: rgba(0, 188, 125, 0.1);
+  width: 6rem;
+  height: 6rem;
+
+  /* Centramos el SVG dentro del cuadrito */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 1rem;
+  margin-bottom: 2rem; /* Separación con el título */
+}
+
+/* Aseguramos que el SVG (el dibujo) tenga el color correcto */
+.icono svg {
+  stroke: var(--secundario); /* Pinta las líneas de verde */
+  width: 3rem;
+  height: 3rem;
+}
+
+/* 4. Tipografía dentro de la tarjeta */
+.item-servicio h3 {
+  color: var(--blanco);
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.item-servicio p {
+  color: var(--gris-claro);
+  font-size: 1.6rem;
+  line-height: 1.6; /* Altura de línea para que sea fácil de leer */
+}
+
+/* ----------------------------
+   SECCIÓN FORMACIÓN (Tarjetas Horizontales)
+   ------------------------ */
+
+/* 1. Contenedor Vertical (Stack) */
+.contenedor-stack {
+  max-width: 100rem; /* Un ancho más controlado para lectura */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Apila las tarjetas una debajo de otra */
+  gap: 2rem; /* Espacio entre cada tarjeta */
+  padding: 0 2rem;
+}
+
+/* 2. Tarjeta Horizontal */
+.item-horizontal {
+  display: flex; /* Magia: pone los hijos (icono y texto) lado a lado */
+  align-items: center; /* Los centra verticalmente */
+  gap: 2.5rem; /* Separación entre el cuadrito del icono y el texto */
+
+  background-color: #172133;
+  border: 1px solid #2a3b55;
+  border-radius: 1.5rem;
+  padding: 3rem; /* Padding interno generoso */
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.item-horizontal:hover {
+  border-color: var(--secundario); /* Borde verde al pasar mouse */
+  transform: translateX(1rem); /* Pequeño desplazamiento a la derecha */
+}
+
+/* 3. Ajuste específico para el icono en esta sección */
+.item-horizontal .icono {
+  margin-bottom: 0; /* IMPORTANTE: Quitamos el margen inferior que tenía en la sección de Servicios */
+  flex-shrink: 0; /* Asegura que el icono no se aplaste en pantallas chicas */
+}
+
+/* 4. Textos */
+.info-texto {
+  flex: 1; /* Toma todo el espacio restante disponible */
+}
+
+.info-texto h3 {
+  color: var(--blanco);
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+/* El texto de la universidad en color verde */
+.info-texto p {
+  color: var(--secundario); /* Aquí usamos tu variable verde */
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.tags-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Permite que bajen de línea si no caben */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background-color: #243042; /* Fondo oscuro para el tag */
+  color: var(--blanco-claro);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  border: 1px solid #36465d;
+}
+
+/* ------------------------
+   SECCIÓN CONTACTO
+   -------------------------- */
+
+/* 1. Contenedor Principal (Grid) */
+.lista-contactos {
+  display: grid;
+  /* Dos columnas iguales: Izquierda (datos) y Derecha (form) */
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* 2. Estilo de las Tarjetas de Contacto (Izquierda) */
+.item-contacto {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  background-color: #172133;
+  border: 1px solid #2a3b55;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.item-contacto:hover {
+  border-color: var(--secundario);
+  transform: translateX(0.5rem);
+}
+
+.item-grande {
+  height: 14rem; /* Más alto para la tarjeta grande */
+}
+
+/* Ajuste del icono (reutilizando estilos) */
+.item-contacto .icono {
+  background-color: rgba(0, 188, 125, 0.1);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+
+.item-contacto .icono svg {
+  stroke: var(--secundario);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Textos de contacto */
+.item-contacto .info h3 {
+  color: var(--blanco);
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: bold;
+}
+
+.item-contacto .info p {
+  color: var(--gris-claro);
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/* ---------------------------------
+   ESTILOS DEL FORMULARIO (Columna Derecha)
+   ------------------------------------ */
+
+.formulario-contacto {
+  background-color: #172133;
+  border: 1px solid #2a3b55;
+  border-radius: 1.5rem;
+  padding: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra los inputs verticalmente si sobra espacio */
+  grid-row: span 3; /* Hace que el formulario ocupe el alto de las dos tarjetas de contacto */
+}
+
+/* Estilos de los Inputs y Textarea */
+.campo {
+  margin-bottom: 2rem;
+}
+
+.campo label {
+  display: block;
+  color: var(--gris-claro);
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  /* Fondo más oscuro para el input, crea profundidad */
+  background-color: #0f182b;
+  border: 1px solid #2a3b55;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: var(--blanco);
+  font-size: 1.6rem;
+  font-family: inherit; /* Para que el textarea no cambie de letra */
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: var(--secundario);
+}
+
+/* Botón Enviar */
+.btn-enviar {
+  background-color: var(--secundario);
+  color: var(--negro);
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-enviar:hover {
+  background-color: #00a56e; /* Un verde un poco más oscuro al hover */
+}
+
+@media (max-width: 768px) {
+  .lista-contactos {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  .formulario-contacto {
+    grid-column: auto; /* Reseteamos la columna */
+    grid-row: auto; /* Reseteamos la fila */
+  }
+
+  .contenido-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .contenido-hero h2,
+  .encabezado-seccion h2 {
+    font-size: 2rem;
+  }
+
+  .contenido-hero p,
+  .encabezado-seccion p {
+    font-size: 1.6rem;
+  }
+}
+
+/* -----------------------------
+   FOOTER
+------------------------------- */
+.footer {
+  /* Un tono ligeramente diferente o igual al fondo para cerrar la página */
+  background-color: var(--bg-futer);
+  padding: 3rem 0;
+  margin-top: 5rem; /* Separación con la sección anterior */
+  border-top: 1px solid var(--gris-oscuro); /* Una línea sutil arriba para separar */
+}
+
+.contenedor-footer {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.footer p {
+  color: var(--gris-claro);
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.subtitulo-footer {
+  color: var(--gris-oscuro);
+  font-size: 1.3rem;
+}
