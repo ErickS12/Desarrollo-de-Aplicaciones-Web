@@ -1,0 +1,291 @@
+:root {
+    --fondo: #f2f2f2;
+    --fondoBarraLateral: #262a34;
+    --fondoLogo: #0275db;
+    --fondoMenu: #35ae6b;
+    --colorBoton: #0275d8;
+    --fondoBoton: #025aa5;
+    --colorTexto: #ffff;
+    --fuentePrincipal: "Open Sans", sans-serif;
+    --fuenteSecundaria: "Roboto", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    background-color: var(--fondo);
+    font-family: var(--fuentePrincipal);
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ----------- BARRA LATERA ------------*/
+.barra-lateral {
+    background-color: var(--fondoBarraLateral);
+    color: var(--colorTexto);
+    min-width: 30rem;
+    min-height: 100vh;
+}
+
+.barra-lateral a {
+    color: var(--colorTexto);
+}
+
+/* ----------- LOGO ------------*/
+.barra-lateral .logo {
+    background: var(--fondoLogo);
+}
+
+.barra-lateral .logo h2 {
+    font-family: var(--fuenteSecundaria);
+    font-weight: 300;
+}
+
+/* ----------- MENU ------------*/
+.barra-lateral .menu a{
+    display: block;
+    padding: 2rem;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.barra-lateral .menu a:hover{
+    background: var(--fondoMenu);
+}
+
+.barra-lateral .menu a svg{
+    margin-right: 1rem;
+}
+
+
+/* ----------- MAIN ------------*/
+.main{
+    padding-top: 4rem;
+
+}
+
+.main .columna{
+    padding: 0 4rem;
+}
+
+.main .titulo{
+    columns: var(--fondoBarraLateral);
+    font-weight: 500;
+    font-family: var(--fuenteSecundaria);
+    margin-bottom: 2rem;
+}
+
+.main .widget{
+    margin-bottom: 4rem;
+}
+
+/* ----------- Widget Nueva Entrada ------------*/
+.main .nueva_entrada form input[type="text"],
+.main .nueva_entrada form textarea{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: var(--fuentePrincipal);
+    border: none;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, .2);
+}
+
+.main .nueva_entrada form textarea{
+    height: 40rem;
+    min-height: 20rem;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.main .widget button{
+    background: var(--colorBoton);
+    cursor: pointer;
+    color: var(--colorTexto);
+    font-family: var(--fuenteSecundaria);
+    font-size: 1.8rem;
+    font-weight: 500;
+    border: none;
+    display: inline-block;
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    transition: .3s ease all;
+}
+
+.main .widget button:hover{
+    background: var(--fondoBoton);
+}
+
+.main .widget button svg{
+    margin-right: 1rem;
+}
+
+/* ----------- WIDGET ESTADISTICAS ------------*/
+.main .estadisticas .contenedor{
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, .2);
+}
+
+.main .estadisticas .caja{
+    background-color: var(--colorTexto);
+    border: 1px solid #e3e3e3;
+    padding: 4rem 2rem;
+    flex: 1;
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+}
+
+.main .estadisticas .caja h3{
+    margin-bottom: 1rem;
+    color: #35ae6b;
+}
+
+.main .estadisticas .caja p{
+    color: #a8a8a8;
+    margin-bottom: 0;
+}
+
+/*
+.main .estadisticas.caja:first-child{
+    border-right: none;
+}
+
+.main .estadisticas.caja:last-child{
+    border-left: none;
+}
+*/
+
+/* ----------- COMENTARIOS ------------*/
+.main .comentarios .contenedor{
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .2);
+}
+
+.main .comentarios .comentario{
+    background: var(--colorTexto);
+    padding: 2rem;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.main .comentarios .comentario .foto{
+    width: 6.4rem;
+    height: 6.4rem;
+    overflow: hidden;
+    margin-right: 2rem;
+    border-radius: 10rem;
+}
+
+.main .comentarios .comentario .foto a{
+    display: inline-block;
+}
+
+.main .comentarios .comentario .foto img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.main .comentarios .comentario .texto{
+    flex: 1;
+}
+
+/*
+.main .comentarios .comentario .texto .texto-comentario{
+    font-family: var(--fuentePrincipal);
+}
+*/
+
+.main .comentarios .comentario .botones button {
+    background: none;
+    padding: .5rem 1rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    width: 15rem;
+}
+
+.main .comentarios .comentario .botones .aprobar{
+    background: var(--fondoMenu);
+}
+
+.main .comentarios .comentario .botones .eliminar{
+    background: #b74848;
+}
+.main .comentarios .comentario .botones .bloquear{
+    color: #acacac;
+}
+
+.main .comentarios .comentario .botones .aprobar:hover{
+    background: #449d44;
+}
+
+.main .comentarios .comentario .botones .eliminar:hover{
+    background: #c9302c;
+}
+.main .comentarios .comentario .botones .bloquear:hover{
+    color: var(--colorTexto); background: #acacac ;
+}
+
+
+
+/* ----------- MEDIA QUERIES ------------*/
+/* dispositivo xs */
+@media screen and (max-width: 320px) {
+    
+}
+/* dispositivo sm */
+@media screen and (max-width: 576px) {
+    .barra-lateral{
+        min-height: auto;
+    }
+}
+/* dispositivo md */
+@media screen and (max-width: 768px) {
+    .main .comentarios .comentario .botones button{
+        width: 100%;
+    }
+}
+/* dispositivo lg */
+@media screen and (max-width: 992px) {
+    
+}
+/* dispositivo xl */
+@media screen and (max-width: 1200px) {
+    .barra-lateral{
+        min-width: auto;
+    }
+
+    .barra-lateral .logo{
+        display: none;
+    }
+}
+/* dispositivo xxl */
+@media screen and (max-width: 1400px) {
+    
+}
