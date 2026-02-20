@@ -1,0 +1,143 @@
+:root{
+    --texto: rgba(255,255,255, .7);
+    --banco: #ffff;
+    --input: #3A3B3C;
+    --input-hover: #4b4d4e;
+    --activo: #2D88FF;
+    --gris-claro: #B0B3BB;
+    --fondo-contenido: #242526;
+}
+
+/* elite code*/
+
+
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px; /* 1rem = 10px */
+    background: #18191A;
+    color: var(--texto);
+}
+
+a{
+    color: var(--texto);
+    text-decoration: none;
+}
+
+
+/*----------------HEADER-------------------*/
+header{
+    background: var(--fondo-contenido);
+    padding: 0.5rem 0;
+}
+
+header .logo{
+    display: inline-block;
+}
+
+header .logo svg{
+    color: var(--banco);
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+header .barra-busqueda{
+    position: relative;
+    width: 100%;
+    padding: 0 0 0 1rem;
+}
+
+header .barra-busqueda input{
+    width: 100%;
+    border: none;
+    background: var(--input);
+    color: var(--texto);
+    height: 4rem;
+    border-radius: 10rem;
+    padding: 0 20px 0 40px;
+}
+
+header .barra-busqueda .icono{
+    position: absolute;
+    top: 1.2rem;
+    left: 2.5rem;
+    color: var(--banco);
+}
+
+
+/* -----------Menu principal --------------*/
+header .menu a{
+    display: inline-block;
+    padding: 1rem 4rem;
+}
+
+header .menu a:hover{
+    color: var(--texto);
+    background: var(--input);
+    border-radius: 1rem;
+}
+
+header .menu a svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+header .menu .active{
+    border-bottom: 4px solid var(--activo);
+    color: var(--activo);
+}
+
+header .menu .active:hover{
+    background: none;
+    border-radius: 0px;
+    color: var(--activo);
+}
+
+header .botones{
+    gap: .7rem;
+}
+
+header .botones a{
+    background: var(--input);
+    display: inline-flex;
+    border-radius: 100%;
+    min-width: 4rem;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+header .botones a:hover{
+    background: #4b4d4e;
+    color: var(--texto);
+}
+
+header .botones .perfil{
+    height: 4rem;
+    padding: 0 .7rem;
+    background: none;
+    min-width: max-content;
+}
+
+header .botones .perfil img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    margin-right: .5rem;
+}
+
