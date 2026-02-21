@@ -43,7 +43,10 @@ a{
 /*----------------HEADER-------------------*/
 header{
     background: var(--fondo-contenido);
-    padding: 0.5rem 0;
+    padding-top: .5rem;
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
 }
 
 header .logo{
@@ -83,7 +86,7 @@ header .barra-busqueda .icono{
 /* -----------Menu principal --------------*/
 header .menu a{
     display: inline-block;
-    padding: 1rem 4rem;
+     padding: 1rem 4rem; 
 }
 
 header .menu a:hover{
@@ -93,8 +96,8 @@ header .menu a:hover{
 }
 
 header .menu a svg{
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 header .menu .active{
@@ -107,6 +110,7 @@ header .menu .active:hover{
     border-radius: 0px;
     color: var(--activo);
 }
+/*----------------BOTONES-----------*/
 
 header .botones{
     gap: .7rem;
@@ -128,16 +132,288 @@ header .botones a:hover{
 }
 
 header .botones .perfil{
-    height: 4rem;
+    height: 5rem;
     padding: 0 .7rem;
     background: none;
     min-width: max-content;
+    border-radius: 2.5rem;
 }
 
 header .botones .perfil img{
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 100%;
     margin-right: .5rem;
 }
+/*-----------------ASIDE----------*/
+aside{
+    height: 100vh;
+    overflow: auto;
+    padding-top: 2rem;
+}
 
+.enlaces-rapidos > nav a{
+    display: flex;
+    align-items: center;
+    color: var(--banco);
+    padding: 1rem 1rem;
+    border-radius: .3rem;
+}
+
+.enlaces-rapidos > nav a:hover{
+    background: var(--input-hover);
+}
+
+.enlaces-rapidos .perfil img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+
+.enlaces-rapidos .icono{
+    margin-right: 2rem;
+}
+
+.enlaces-rapidos .icono svg{
+    height: 2rem;
+    width: 2rem;
+}
+/*----------------FOOTER----------*/
+footer{
+    margin: 4rem 0;
+}
+
+footer nav a{
+    font-size: 1.4rem;
+    margin-right: .7rem;
+    color: var(--gris-claro);
+}
+
+footer nav a:hover{
+    text-decoration: underline;
+    color: var(--gris-claro);
+}
+
+/*----------------CONTACTOS----------*/
+.contactos .seccion{
+    margin-bottom: 2rem;
+}
+
+.contactos .titulo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--gris-claro);
+    margin-bottom: 1rem;
+}
+
+.contactos .publicidad{
+    display: block;
+    max-height: 10rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+.contactos .publicidad img{
+    width: 100%;
+}
+
+.contactos nav a{
+    display: flex;
+    align-items: center;
+    color: var(--banco);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.contactos nav a:hover{
+    background: var(--input-hover);
+}
+
+.contactos nav a img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10rem;
+    margin-right: 1rem;
+}
+
+/*----------------MAIN----------*/
+main{
+    padding-top: 2rem;
+}
+
+main .publicar, .publicacion{
+    background: var(--fondo-contenido);
+    width: 100%;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+main .publicar .formulario{
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+main .foto{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    border-radius: 10rem;
+    margin-right: 1rem;
+    
+}
+
+main .foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .publicar .formulario input{
+    width: 100%;
+    border: none;
+    background: var(--input);
+    height: 4rem;
+    border-radius: 2rem;
+    padding: 0 2rem;
+    color: var(--texto);
+    outline: none;
+}
+
+main .publicar .botones a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .3rem;
+}
+
+main .publicar .botones a:hover{
+    background: var(--input-hover);
+    color: var(--texto);
+}
+
+main .publicar hr {
+    border: none;
+    border-top: 1px solid var(--input);
+    margin: 1rem 0;
+}
+
+main .publicar .botones a svg{
+    margin-right: .7rem;
+}
+
+/*-----------PUBLICACIÓN----------*/
+
+main .publicacion .header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+main .publicacion .header .datos{
+    display: flex;
+    flex-direction: column;
+}
+
+main .publicacion .header .datos .nombre{
+    color: var(--banco);
+}
+
+main .publicacion .header .datos .hora{
+    color: var(--texto);
+    font-size: 1.4rem;
+}
+
+main .publicacion .header .datos .hora:hover{
+    color: var(--texto);
+}
+
+main .publicacion .header .datos a:hover{
+    color: var(--texto);
+    text-decoration: underline;
+}
+
+main .publicacion .body p{
+    margin-bottom: 1rem;
+    color: var(--banco);
+}
+
+main .publicacion img{
+    width: 100%;
+}
+
+main .publicacion .comentarios{
+    padding: 1rem;
+}
+
+
+
+main .publicacion .comentarios a,
+main .publicacion .comentarios .me-gusta{
+    color: var(--texto);
+}
+
+main .publicacion .comentarios a:hover{
+    text-decoration: underline;
+    color: var(--texto);
+}
+
+main .publicacion .botones {
+    gap: 1rem;
+}
+
+main .publicacion .botones button{
+    width: 100%;
+    border: none;
+    background: none;
+    color: var(--texto);
+    padding: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+main .publicacion .botones button:hover{
+    background: var(--input-hover);
+}
+
+main .publicacion .botones button svg{
+    margin-right: .5rem;
+}
+
+
+/*-----------------MEDIA QUERIES----------*/
+/* DISPOSITIVOS MD*/
+@media screen and (max-width:767px){
+    .enlaces-rapidos, .contactos{
+        display: none;
+    }
+}
+
+/* DISPOSITIVOS LG*/
+@media screen and (max-width:1200px){
+    header{
+        padding-top: 1rem;
+    }
+
+    .menu{
+        margin-top: 1rem;
+    }
+}
+
+/* DISPOSITIVOS XL*/
+@media screen and (max-width:1200px){
+    header .menu a{
+        padding: 1rem 2rem;
+    }
+}
