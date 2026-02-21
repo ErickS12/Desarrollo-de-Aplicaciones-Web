@@ -6,6 +6,7 @@
     --activo: #2D88FF;
     --gris-claro: #B0B3BB;
     --fondo-contenido: #242526;
+    --fuentePrincipal: "Open Sans", sans-serif;
 }
 
 /* elite code*/
@@ -32,6 +33,7 @@ body{
     font-size: 16px; /* 1rem = 10px */
     background: #18191A;
     color: var(--texto);
+    font-family: var(--fuentePrincipal)
 }
 
 a{
@@ -73,6 +75,7 @@ header .barra-busqueda input{
     height: 4rem;
     border-radius: 10rem;
     padding: 0 20px 0 40px;
+    outline: none;
 }
 
 header .barra-busqueda .icono{
