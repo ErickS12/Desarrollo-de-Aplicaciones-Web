@@ -126,6 +126,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    align-items: start;
 }
 
 @media(min-width: 768px) {
@@ -141,19 +142,33 @@ h3 {
     padding: 2rem;
 }
 
-/*
+/* Mobile layout rules (applied below) will make the card a flex column so
+   the image + info distribute evenly on small screens. For desktop keep
+   the original block layout so images use natural height. */
+
 .producto__imagen{
     width: 100%;
-
+    height: auto; /* escritorio: altura natural */
+    object-fit: cover;
+    border-radius: 3%;
+    display: block;
 }
-    */
+
+.producto__informacion{
+    display: block;
+    margin-top: 1rem;
+}
 
 .producto__nombre {
     font-size: 2.5rem;
+    color: var(--secundario);
+    margin: 0.5rem 0;
 }
 
 .producto__autor {
     font-size: 2rem;
+    color: var(--secundario);
+    margin: 0.5rem 0;
 }
 
 @media(min-width: 768px) {
@@ -172,13 +187,13 @@ h3 {
 .producto__precio {
     font-size: 2.8rem;
     color: var(--segundoSecundario);
+    margin-top: 1.5rem; /* espacio consistente sin estirar la tarjeta */
 }
 
 .producto__nombre,
 .producto__autor,
 .producto__precio {
     font-family: var(--fuentePricipal);
-    margin: 1rem;
     text-align: center;
     line-height: 1.2;
 }
@@ -335,4 +350,73 @@ h3 {
     border: none;
     cursor: pointer;
     text-transform: uppercase;
+}
+
+/* Ajustes responsive: reducir tamaños para que el precio siempre sea visible */
+/* Mobile-specific rules: apply the compact/fixed-height card layout only
+   on small screens so desktop preserves the original look (imagen grande). */
+@media (max-width: 767px) {
+    .grid {
+        align-items: start;
+    }
+
+    .producto {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        max-height: 34rem;
+        overflow: hidden;
+        padding: 1.6rem;
+    }
+
+    .producto > a {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        color: inherit;
+        overflow: hidden;
+    }
+
+    .producto__imagen {
+        height: 14rem;
+    }
+
+    .producto__informacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 1 auto;
+    }
+
+    .producto__precio {
+        font-size: 2.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .producto__nombre {
+        font-size: 2.2rem;
+    }
+
+    .producto__autor {
+        font-size: 1.8rem;
+    }
+
+    /* Extra small screens */
+    @media (max-width: 360px) {
+        .producto__precio {
+            font-size: 1.9rem;
+        }
+
+        .producto__nombre {
+            font-size: 2rem;
+        }
+
+        .producto__imagen {
+            height: 10.5rem;
+        }
+
+        .producto {
+            max-height: none;
+        }
+    }
 }
